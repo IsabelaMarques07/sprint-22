@@ -13,11 +13,11 @@ public class User {
 	private int idUser;
 	@Column(nullable = false)
 	private String name;
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String email;
 	@Column(nullable = false)
 	private String password;
-	@Column(nullable = false)
+	@Column(nullable = false, unique=true)
 	private String cnpj;
 	
 	public User() {
