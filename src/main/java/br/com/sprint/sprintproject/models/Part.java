@@ -14,7 +14,7 @@ public class Part {
 	@Column(nullable = false)
 	private String name;
 	@Column(nullable = false)
-	private String status;
+	private int idStatus;
 	@Column(nullable = false)
 	private int idVehicle;
 	
@@ -22,11 +22,11 @@ public class Part {
 
 	}
 	
-	public Part(int idPart, String name, String status, int idVehicle) {
+	public Part(int idPart, String name, int idStatus, int idVehicle) {
 		super();
 		this.idPart = idPart;
 		this.name = name;
-		this.status = status;
+		this.idStatus = idStatus;
 		this.idVehicle = idVehicle;
 	}
 
@@ -46,12 +46,12 @@ public class Part {
 		this.name = name;
 	}
 
-	public String getStatus() {
-		return status;
+	public int getIdStatus() {
+		return idStatus;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setidStatus(int idStatus) {
+		this.idStatus = idStatus;
 	}
 
 	public int getIdVehicle() {

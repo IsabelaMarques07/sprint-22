@@ -14,7 +14,7 @@ public class Vehicle {
 	@Column(nullable = false)
 	private String licensePlate;
 	@Column(nullable = false)
-	private String model;
+	private int idModel;
 	@Column(nullable = false)
 	private int idUser;
 	
@@ -22,11 +22,11 @@ public class Vehicle {
 
 	}
 	
-	public Vehicle(int idVehicle, String licensePlate, String model, int idUser) {
+	public Vehicle(int idVehicle, String licensePlate, int idModel, int idUser) {
 		super();
 		this.idVehicle = idVehicle;
 		this.licensePlate = licensePlate;
-		this.model = model;
+		this.idModel = idModel;
 		this.idUser = idUser;
 	}
 
@@ -46,12 +46,12 @@ public class Vehicle {
 		this.licensePlate = licensePlate;
 	}
 
-	public String getModel() {
-		return model;
+	public int getIdModel() {
+		return idModel;
 	}
 
-	public void setModel(String model) {
-		this.model = model;
+	public void setIdModel(int idModel) {
+		this.idModel = idModel;
 	}
 
 	public int getIdUser() {

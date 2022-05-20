@@ -6,17 +6,16 @@ import javax.validation.constraints.NotNull;
 import br.com.sprint.sprintproject.models.Part;
 
 public class PartDTO {
-	
+
 	@NotBlank
 	@NotNull
 	private String name;
 	@NotBlank
 	@NotNull
-	private String status;
+	private int idStatus;
 	@NotBlank
 	@NotNull
 	private int idVehicle;
-	
 
 	public String getName() {
 		return name;
@@ -26,12 +25,12 @@ public class PartDTO {
 		this.name = name;
 	}
 
-	public String getStatus() {
-		return status;
+	public int getIdStatus() {
+		return idStatus;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setIdStatus(int idStatus) {
+		this.idStatus = idStatus;
 	}
 
 	public int getIdVehicle() {
@@ -41,10 +40,10 @@ public class PartDTO {
 	public void setIdVehicle(int idVehicle) {
 		this.idVehicle = idVehicle;
 	}
-	
+
 	public void fromPart(Part part) {
 		this.idVehicle = part.getIdVehicle();
 		this.name = part.getName();
-		this.status = part.getStatus();
+		this.idStatus = part.getIdStatus();
 	}
 }

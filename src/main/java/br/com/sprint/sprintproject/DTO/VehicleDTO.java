@@ -12,7 +12,7 @@ public class VehicleDTO {
 	private String licensePlate;
 	@NotNull
 	@NotBlank
-	private String model;
+	private int idModel;
 	@NotNull
 	@NotBlank
 	private int idUser;
@@ -26,12 +26,12 @@ public class VehicleDTO {
 		this.licensePlate = licensePlate;
 	}
 
-	public String getModel() {
-		return model;
+	public int getIdModel() {
+		return idModel;
 	}
 
-	public void setModel(String model) {
-		this.model = model;
+	public void setIdModel(int idModel) {
+		this.idModel = idModel;
 	}
 
 	public int getIdUser() {
@@ -45,6 +45,6 @@ public class VehicleDTO {
 	public void fromVehicle(Vehicle vehicle) {
 		this.idUser = vehicle.getIdUser();
 		this.licensePlate = vehicle.getLicensePlate();
-		this.model = vehicle.getModel();
+		this.idModel = vehicle.getIdModel();
 	}
 }
