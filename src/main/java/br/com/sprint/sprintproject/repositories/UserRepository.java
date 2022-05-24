@@ -7,5 +7,6 @@ import br.com.sprint.sprintproject.models.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-
+	User findByEmail(String email);
+	User findByPassword(String password);
 }
