@@ -14,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import br.com.sprint.sprintproject.DTO.PartDTO;
 import br.com.sprint.sprintproject.models.Part;
-import br.com.sprint.sprintproject.models.User;
 import br.com.sprint.sprintproject.repositories.PartRepository;
 
 @Controller
@@ -36,7 +35,6 @@ public class PartController {
 	@GetMapping("/peca/{id}")
 	public ModelAndView part(@PathVariable int id, HttpServletRequest request, PartDTO partDto) {
 		Optional<Part> optionalPart = partRepository.findById(id);
-		request.setAttribute("id", Integer.toString(id));
 		if (optionalPart.isPresent()) {
 			Part part = optionalPart.get();
 			partDto.fromPart(part);

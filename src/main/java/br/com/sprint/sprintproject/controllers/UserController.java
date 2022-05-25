@@ -95,7 +95,7 @@ public class UserController {
 		}
 
 		//
-		return new ModelAndView("redirect:/home");
+		return new ModelAndView("redirect:/home/".concat(Integer.toString(id)));
 	}
 	
 	@PostMapping("/config/{id}")
