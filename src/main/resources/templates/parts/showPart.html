@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<header th:replace="~{cabecalho :: head('Cadastro')}"></header>
+<body>
+	<nav th:replace="~{menu-logado :: nav}"></nav>
+			<h3 class="text-center mt-3">Peça do veículo</h3>
+	<div class="container mt-3">
+		<form th:object="${partDTO}" action="" method="POST">
+			<div class="col d-flex justify-content-around">
+				<div class="col-md-6">
+					<div class="input-group mb-2 input-group-sm">
+						<span class="input-group-text">Nome</span> <input
+							th:errorclass="is-invalid" type="text" th:field="*{name}"
+							class="form-control">
+						<div class="invalid-feedback" th:errors="*{name}"></div>
+					</div>
+					<div class="input-group mb-2 input-group-sm">
+						<span class="input-group-text">Status</span> <input
+							th:errorclass="is-invalid" type="text" th:field="*{idStatus}"
+							class="form-control">
+						<div class="invalid-feedback" th:errors="*{idStatus}"></div>
+						<span class="input-group-text">Veículo</span> <input
+							th:errorclass="is-invalid" type="text" th:field="*{idVehicle}"
+							class="form-control">
+						<div class="invalid-feedback" th:errors="*{idVehicle}"></div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

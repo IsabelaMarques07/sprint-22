@@ -1,0 +1,34 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<header th:replace="~{cabecalho :: head('Listar veículos')}"></header>
+
+<body>
+	<nav th:replace="~{menu-logado :: nav}"></nav>
+	<div class="container mt-3">
+		
+		<h3>Seus veículos</h3>
+		<table id="tbProduto" class="table table-bordered table-sm">
+			<thead>
+				<tr>
+					<th>Modelo</th>
+					<th>Placa</th>
+					<th>Acessar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="veiculo : ${listarVeiculos}">
+					<td th:text="${veiculo.getIdModel()}">modelo</td>
+					<td th:text="${veiculo.getLicensePlate()}">placa</td>
+					<td>
+						<a href="" class="btn btn-outline-warning">
+							Mais detalhes</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<a type="button" class="btn btn-warning" th:href="@{/vehicle/{userId}/criar (userId = ${id})}">Cadastrar novo veículo</a>
+	</div>
+</body>
+
+</html>

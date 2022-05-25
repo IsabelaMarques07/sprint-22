@@ -11,10 +11,7 @@ public class VehicleDTO {
 	@NotBlank
 	private String licensePlate;
 	@NotNull
-	@NotBlank
 	private int idModel;
-	@NotNull
-	@NotBlank
 	private int idUser;
 	
 

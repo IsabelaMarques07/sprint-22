@@ -1,0 +1,36 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<header th:replace="~{cabecalho :: head('Cadastrar veículo')}"></header>
+<body>
+<nav th:replace="~{menu-logado :: nav}"></nav>
+	<div class="container mt-3">
+	<h3>Adicionar novo caminhão</h3>
+		<form>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="input-group mb-3 input-group-sm">
+						<span class="input-group-text">Id do Modelo</span> 
+						<input type="number"
+							class="form-control">
+						<div class="invalid-feedback"></div>
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="input-group mb-3 input-group-sm">
+						<span class="input-group-text">Placa</span> <input type="text"
+							
+							class="form-control">
+						<div class="invalid-feedback"></div>
+					</div>
+				</div>
+			</div>
+			<input class="btn btn-success" type="submit" value="Salvar" />
+		</form>
+	</div>
+</body>
+</html>

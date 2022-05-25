@@ -6,8 +6,6 @@ import javax.validation.constraints.NotNull;
 import br.com.sprint.sprintproject.models.User;
 
 public class UserDTO {
-	@NotBlank
-	@NotNull
 	private String name;
 	@NotBlank
 	@NotNull
@@ -15,8 +13,7 @@ public class UserDTO {
 	@NotBlank
 	@NotNull
 	private String password;
-	@NotBlank
-	@NotNull
+
 	private String cnpj;
 
 	public String getName() {

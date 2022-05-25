@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<header th:replace="~{cabecalho :: head('Listar veículos')}"></header>
+
+<body>
+	<nav th:replace="~{menu-logado :: nav}"></nav>
+	<div class="container mt-3">
+		
+		<h3>Saúde do caminhão</h3>
+		<table id="tbProduto" class="table table-bordered table-sm">
+			<thead>
+				<tr>
+					<th>Peça</th>
+					<th>Status</th>
+					<th>Mais opções</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="peca : ${listarPecas}">
+					<td th:text="${peca.getName()}">name</td>
+					<td th:text="${peca.getIdStatus()}">status</td>
+					<td>
+						<a th:href="@{/peca/{pecaId}(pecaId = ${peca.getIdPart()})}" class="btn btn-outline-warning">
+							Mais opções</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>
