@@ -1,5 +1,5 @@
 # Chico
-### Sistema para monitorar a saúde do caminhão em uma frota
+### Sistema para monitorar a saúde do caminhão em uma frota para estudo de CRUD com Java
 
 ### 🛠 Tecnologias utilizadas:
 * Java (SpringBoot, Thymeleaf, JPA)
